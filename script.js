@@ -11,6 +11,9 @@ document.querySelectorAll(".items").forEach(item => {
             let calculate = showData.innerHTML;
             calculate = calculate.replace("x","*").trim();
             try {
+                if(calculate[0] == "0") {
+                    calculate = calculate.substr(1, calculate.length);
+                }
                 let result = eval(calculate).toString();
                 result = result.toString();
                 if(result == "Infinity" || result == "NaN" || result == "undefined") {
