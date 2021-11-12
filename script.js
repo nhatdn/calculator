@@ -2,8 +2,8 @@ let showData = document.querySelector(".show-calculate");
 let showResult = document.querySelector(".show-result");
 document.querySelectorAll(".items").forEach(item => {
     item.addEventListener('click',(e) =>{
-        if(e.target.classList.contains("arrow") && showData.innerHTML.length != 0) {
-            showData.innerHTML = showData.innerHTML.substr(0, showData.innerHTML.length - 1);
+        if(e.target.classList.contains("arrow")) {
+            if(showData.innerHTML.length != 0) showData.innerHTML = showData.innerHTML.substr(0, showData.innerHTML.length - 1);
         } else if(e.target.innerHTML == "C") {
             showData.innerHTML = "";
             showResult.innerHTML = "0";
